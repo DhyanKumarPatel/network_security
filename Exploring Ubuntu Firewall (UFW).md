@@ -25,7 +25,7 @@ sudo apt install <packagename>
 ```bash
 sudo ufw status
 ```
-![Fig:](./images/1.png)
+![Fig:](./images_1/1.png)
 
 **Purpose:** Check whether UFW is currently active or inactive before applying any changes.  
 **Tool Explanation:** The `ufw status` command displays the firewall’s current state along with any active rules.  
@@ -37,7 +37,7 @@ sudo ufw status
 ```bash
 sudo ufw allow 22/tcp
 ```
-![Fig:](./images/2.png)
+![Fig:](./images_1/2.png)
 
 **Purpose:** Make sure turning on the firewall won’t block SSH connection.  
 **Tool Explanation:** The `ufw allow` command adds a rule to let traffic through on a specific port (22/tcp for SSH).  
@@ -52,7 +52,7 @@ sudo ufw allow 22/tcp
 ```bash
 sudo ss -tuln
 ```
-![Fig:](./images/3.png)
+![Fig:](./images_1/3.png)
 
 **Purpose:** List all services currently listening on TCP and UDP ports.  
 **Tool Explanation:**  
@@ -69,7 +69,7 @@ sudo ss -tuln
 ```bash
 sudo ufw enable
 ```
-![Fig:](./images/4.png)
+![Fig:](./images_1/4.png)
 
 **Purpose:** Activate the firewall so that all rules take effect.  
 **Observation:** UFW was enabled successfully and will automatically stay active after startup.  
@@ -80,7 +80,7 @@ sudo ufw enable
 ```bash
 sudo ufw status
 ```
-![Fig:](./images/5.png)
+![Fig:](./images_1/5.png)
 
 **Purpose:** Confirm that UFW is active and rules are applied.  
 **Observation:** Firewall was active, with only SSH (22/tcp) allowed.  
@@ -92,8 +92,8 @@ sudo ufw status
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 ```
-![Fig:](./images/6A.png)
-![Fig:](./images/6B.png)
+![Fig:](./images_1/6A.png)
+![Fig:](./images_1/6B.png)
 
 **Purpose:** Open HTTP (80) and HTTPS (443) ports for web server access.  
 **Tool Explanation:**  
@@ -111,7 +111,7 @@ sudo ufw allow 443/tcp
 ```bash
 sudo ufw status verbose
 ```
-![Fig:](./images/7.png)
+![Fig:](./images_1/7.png)
 
 **Purpose:** Check firewall’s default policies, logging level, and all active rules.  
 **Observation:** Default was **deny incoming, allow outgoing**. Logging was **low** (later increased). Rules (SSH, HTTP, HTTPS) displayed correctly.  
@@ -122,7 +122,7 @@ sudo ufw status verbose
 ```bash
 sudo ufw deny from 10.0.0.0
 ```
-![Fig:](./images/8.png)
+![Fig:](./images_1/8.png)
 
 **Purpose:** Block all traffic from an untrusted IP.  
 **Observation:** Deny rule for `10.0.0.0` was added successfully.  
@@ -133,7 +133,7 @@ sudo ufw deny from 10.0.0.0
 ```bash
 sudo ufw allow from 192.168.1.50 to any port 587 proto tcp
 ```
-![Fig:](./images/9.png)
+![Fig:](./images_1/9.png)
 
 **Purpose:** Allow only a trusted host access to mail submission (SMTP) service.  
 **Tool Explanation:** Port **587** is used for outgoing email submission by mail clients.  
@@ -148,7 +148,7 @@ sudo ufw allow from 192.168.1.50 to any port 587 proto tcp
 ```bash
 sudo ufw status numbered
 ```
-![Fig:](./images/10.png)
+![Fig:](./images_1/10.png)
 
 **Purpose:** Show rules with index numbers for easy deletion/modification.  
 **Observation:** All rules listed with numbers for easier management.  
@@ -163,7 +163,7 @@ sudo ufw status numbered
 ```bash
 sudo ufw logging on
 ```
-![Fig:](./images/B1.png)
+![Fig:](./images_1/B1.png)
 
 **Purpose:** Enable firewall logging for monitoring and troubleshooting.  
 **Observation:** Logging enabled, activity recorded in `/var/log/ufw.log`.  
@@ -174,7 +174,7 @@ sudo ufw logging on
 ```bash
 sudo ufw logging high
 ```
-![Fig:](./images/B2.png)
+![Fig:](./images_1/B2.png)
 
 **Purpose:** Provide detailed logs for allowed and denied traffic.  
 **Levels:**  
@@ -191,7 +191,7 @@ sudo ufw logging high
 ```bash
 sudo tail -f /var/log/ufw.log
 ```
-![Fig:](./images/B3.png)
+![Fig:](./images_1/B3.png)
 
 **Purpose:** View live firewall activity.  
 **Observation:** Logs showed real-time source/destination IPs and ports. Stopped with `CTRL+C`.  
@@ -205,7 +205,7 @@ sudo tail -f /var/log/ufw.log
 ```bash
 sudo grep 'ALLOW' /var/log/ufw.log
 ```
-![Fig:](./images/B4A.png)
+![Fig:](./images_1/B4A.png)
 
 **Purpose:** Filter logs to show only allowed packets.  
 **Observation:** Entries displayed for allowed traffic.  
@@ -216,7 +216,7 @@ sudo grep 'ALLOW' /var/log/ufw.log
 ```bash
 sudo grep 'DENY' /var/log/ufw.log
 ```
-![Fig:](./images/B4B.png)
+![Fig:](./images_1/B4B.png)
 
 **Purpose:** Filter logs to show only denied packets.  
 **Observation:** No DENY entries appeared, since nothing attempted to connect on blocked ports.  
@@ -239,3 +239,4 @@ Key takeaways include:
 - The use of commands like `ufw status numbered`, `ufw logging high`, and `grep` filters provides more control and visibility over firewall behavior.  
 
 Overall, this hands-on practice emphasized the importance of proper firewall configuration for maintaining system security, preventing unauthorized access, and ensuring that only necessary services are reachable.  
+
