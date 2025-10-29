@@ -45,7 +45,7 @@ ip a
 The goal of this step was to install Snort and configure it with the correct network interface and home network range.
 
 ### Observation:
-The installation finished successfully. During setup, I selected my active network interface (`enp0s3`) and defined the local subnet as `192.168.1.0/24`. Snort installed without any dependency issues, confirming that the environment was properly set up.
+The installation finished successfully. During setup, I selected my active network interface (`enp0s3`) and defined the local subnet as `192.168.0.0/16`. Snort installed without any dependency issues, confirming that the environment was properly set up.
 
 ---
 
