@@ -186,8 +186,8 @@ top
 sudo kill 30034
 ```
 ![Step 7 Screenshot](images/snort_image/14.png)
-![Step 7 Screenshot](images/snort_image/14a.png)
-![Step 7 Screenshot](images/snort_image/14b.png)
+![Step 7 Screenshot](images/snort_image/14(a).png)
+![Step 7 Screenshot](images/snort_image/14(b).png)
 
 ### Purpose:
 To verify that Snort is actively running in the background and to learn how to stop the process manually when required.
