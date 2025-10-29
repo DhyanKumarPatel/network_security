@@ -196,7 +196,7 @@ To verify that Snort is actively running in the background and to learn how to s
 After starting Snort in daemon mode, I used the `top` command to confirm it was active. Snort appeared with a unique PID, showing it was running properly. I then used the `sudo kill` command to stop it, and after checking again, it was no longer listed — confirming the process had been terminated successfully.
 
 ### Question:
-If you wanted to stop the Snort process from running, what command would you use?
+To see to the different processes running in your system, use the command top . If you wait a few seconds, you should see Snort running. If you wanted to stop the Snort process from running, what is the command to terminate it?
 
 ### Answer:
 After verifying Snort’s process ID with the `top` command, I used:
