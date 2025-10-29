@@ -32,7 +32,7 @@ sudo apt install snort -y
 
 During installation, I was prompted for:
 - **Network Interface:** `enp0s3`
-- **HOME_NET:** `192.168.1.0/24`
+- **HOME_NET:** `192.168.0.0/16`
 ![Step 2.1 Screenshot](images/snort_image/3.png)
 
 To confirm the correct interface:
