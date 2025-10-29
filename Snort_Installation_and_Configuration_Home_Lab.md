@@ -1,7 +1,6 @@
 # Snort Installation and Configuration
 
-This document is part of my **Network Security Home Lab** series.  
-It details how I installed, configured, and tested **Snort**, an open-source Intrusion Detection System (IDS), on an Ubuntu virtual machine.  
+
 
 ---
 
