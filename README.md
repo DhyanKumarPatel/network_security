@@ -17,4 +17,8 @@ Each lab is documented as a separate "chapter" in markdown format. The goal of t
 - [Snort Installation and Configuration Home Lab](Snort_Installation_and_Configuration_Home_Lab.md)  
   *(Assignment 6: Installing and setting up Snort on Ubuntu, configuring network interfaces and defining the HOME_NET variable, adding both community and custom local rules, verifying the configuration, running Snort in IDS or daemon mode, and reviewing alert logs for analysis.)*
 
+  - [Network Security SIEM (Suricata + Promtail + Loki + LogCLI)](Network_Security_SIEM_Lab_Report_Final.md)  
+  *(Assignment 9: Building and configuring a lightweight SIEM pipeline using Suricata for network event detection, Promtail for log collection, Loki as a central log database, and LogCLI for querying alerts and correlations. Includes custom rule creation, alert validation, correlation analysis, and full system cleanup.)*
+
+
 ---
